@@ -4,4 +4,6 @@
     <string name="app_name">TicTacToe</string>
     <string name="action_settings">Settings</string>
 	<string name="restart_game">Start new game</string>
+	<string name="field_value_x">X</string>
+	<string name="filed_value_o">O</string>
 </resources>

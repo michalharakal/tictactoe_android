@@ -64,7 +64,7 @@
         android:layout_alignBottom="@+id/button2"
         android:layout_toRightOf="@+id/button2" />
 
-      <Button
+    <Button
         android:id="@+id/buttonRestart"
         android:layout_width="@dimen/restart_button_width"
         android:layout_height="@dimen/button_height"
@@ -73,11 +73,11 @@
         android:text="@string/restart_game"
         android:textSize="12sp" />
 
-      <Button
-          android:id="@+id/button1"
-          android:layout_width="@dimen/button_width"
-          android:layout_height="@dimen/button_height"
-          android:layout_above="@+id/button5"
-          android:layout_toLeftOf="@+id/button2" />
-      
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_above="@+id/button5"
+        android:layout_toLeftOf="@+id/button2" />
+
 </RelativeLayout>

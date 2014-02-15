@@ -23,6 +23,14 @@
 	   <artifactId>tictactoe-parent</artifactId>
 	    <version>0.1-SNAPSHOT</version>
   </parent>
+  
+  <repositories>
+      <repository>
+          <id>bitExpert-nexus-releases</id>
+          <name>bitExpert nexus</name>
+          <url>http://192.168.2.22:8081/nexus/content/groups/public</url>
+      </repository>
+  </repositories>
 
   <artifactId>tictactoe</artifactId>
   <name>game</name>
@@ -35,6 +43,13 @@
       <artifactId>compatibility-v4</artifactId>
       <version>${android.support-version}</version>
     </dependency>
+	
+	
+	<dependency>
+	  <groupId>net.aschemann.tut3c</groupId>
+	  <artifactId>tictactoe-core</artifactId>
+	  <version>1.0-SNAPSHOT</version>
+	</dependency>
 
     <dependency>
       <groupId>com.google.code.gson</groupId>

@@ -71,4 +71,13 @@
         android:layout_alignBottom="@+id/button8"
         android:layout_toRightOf="@+id/button8" />
 
+      <Button
+        android:id="@+id/buttonRestart"
+        android:layout_width="@dimen/restart_button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/restart_game"
+        android:textSize="12sp" />
+      
 </RelativeLayout>

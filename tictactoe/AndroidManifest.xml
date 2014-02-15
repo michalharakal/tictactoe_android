@@ -16,7 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.tictactoe"
+    package="de.jugda.tictactoe"
     android:versionCode="1"
     android:versionName="1.0">
 
@@ -29,11 +29,10 @@
   <application
       android:label="TicTacToe"
       android:icon="@drawable/ic_launcher"
-      android:name=".TicTacToe"
       >
     <activity
         android:launchMode="singleTop"
-        android:name=".TicTacToeActivity"
+        android:name="de.jugda.tictactoe.MainActivity"
         android:theme="@android:style/Theme.Holo"
         >
       <intent-filter>

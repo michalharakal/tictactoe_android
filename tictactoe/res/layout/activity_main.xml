@@ -9,67 +9,60 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button5"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/button1" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_below="@+id/button1"
-        android:layout_toRightOf="@+id/button1" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_below="@+id/button1"
-        android:layout_toLeftOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_below="@+id/button1"
-        android:layout_toLeftOf="@+id/button1" />
-
-    <Button
         android:id="@+id/button6"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:layout_alignRight="@+id/button5"
-        android:layout_alignTop="@+id/button1" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_above="@+id/button1"
-        android:layout_toLeftOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="@dimen/button_width"
-        android:layout_height="@dimen/button_height"
-        android:layout_alignBottom="@+id/button7"
-        android:layout_toLeftOf="@+id/button2" />
+        android:layout_alignBottom="@+id/button5"
+        android:layout_toRightOf="@+id/button5" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:layout_alignBottom="@+id/button8"
-        android:layout_toRightOf="@+id/button8" />
+        android:layout_below="@+id/button5"
+        android:layout_toRightOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/button5"
+        android:layout_toLeftOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/button5"
+        android:layout_toLeftOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignRight="@+id/button7"
+        android:layout_alignTop="@+id/button5" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toLeftOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toRightOf="@+id/button2" />
 
       <Button
         android:id="@+id/buttonRestart"
@@ -79,5 +72,12 @@
         android:layout_centerHorizontal="true"
         android:text="@string/restart_game"
         android:textSize="12sp" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="@dimen/button_width"
+          android:layout_height="@dimen/button_height"
+          android:layout_above="@+id/button5"
+          android:layout_toLeftOf="@+id/button2" />
       
 </RelativeLayout>

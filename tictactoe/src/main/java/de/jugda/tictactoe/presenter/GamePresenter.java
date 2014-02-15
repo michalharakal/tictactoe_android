@@ -3,6 +3,7 @@ package de.jugda.tictactoe.presenter;
 import de.jugda.tictactoe.view.BoardView;
 import tictactoe.core.Coordinate;
 import tictactoe.core.Value;
+import tictactoe.game.impl.local.Game;
 
 public class GamePresenter {
 

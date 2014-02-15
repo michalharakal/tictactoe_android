@@ -30,6 +30,8 @@ public class MainActivity extends Activity implements OnClickListener, BoardView
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		gp = new GamePresenter(this);
+		
 		button1 = (Button)findViewById(R.id.button1);
 		button1.setOnClickListener(this);
 

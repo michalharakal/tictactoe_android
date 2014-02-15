@@ -28,12 +28,11 @@
 
   <application
       android:label="TicTacToe"
-      android:icon="@drawable/ic_launcher"
-      >
+      android:icon="@drawable/ic_launcher" 
+      android:theme="@style/AppTheme">
     <activity
         android:launchMode="singleTop"
         android:name="de.jugda.tictactoe.MainActivity"
-        android:theme="@android:style/Theme.Holo"
         >
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>

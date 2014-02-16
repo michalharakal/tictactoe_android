@@ -28,7 +28,7 @@
       <repository>
           <id>bitExpert-nexus-releases</id>
           <name>bitExpert nexus</name>
-          <url>http://192.168.2.22:8081/nexus/content/groups/public</url>
+          <url>http://projects.aschemann.net/nexus/content/groups/public</url>
       </repository>
   </repositories>
 

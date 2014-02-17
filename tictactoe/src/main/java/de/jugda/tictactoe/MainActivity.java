@@ -2,16 +2,19 @@ package de.jugda.tictactoe;
 
 import tictactoe.core.Coordinate;
 import tictactoe.core.Value;
-import de.jugda.tictactoe.presenter.GamePresenter;
-import de.jugda.tictactoe.view.BoardView;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import dagger.ObjectGraph;
+import de.jugda.tictactoe.modules.LocalGameModule;
+import de.jugda.tictactoe.presenter.GamePresenter;
+import de.jugda.tictactoe.view.BoardView;
 
-public class MainActivity extends Activity implements OnClickListener, BoardView {
+public class MainActivity extends Activity implements OnClickListener,
+		BoardView {
 
 	private GamePresenter gp;
 	private Button button1;
@@ -24,42 +27,43 @@ public class MainActivity extends Activity implements OnClickListener, BoardView
 	private Button button8;
 	private Button button9;
 	private Button buttonRestart;
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		gp = new GamePresenter(this);
-		
-		button1 = (Button)findViewById(R.id.button1);
+
+		ObjectGraph graph = ObjectGraph.create(new LocalGameModule(this));
+
+		gp = graph.get(GamePresenter.class);
+		button1 = (Button) findViewById(R.id.button1);
 		button1.setOnClickListener(this);
 
-		button2 = (Button)findViewById(R.id.button2);
+		button2 = (Button) findViewById(R.id.button2);
 		button2.setOnClickListener(this);
 
-		button3 = (Button)findViewById(R.id.button3);
+		button3 = (Button) findViewById(R.id.button3);
 		button3.setOnClickListener(this);
 
-		button4 = (Button)findViewById(R.id.button4);
+		button4 = (Button) findViewById(R.id.button4);
 		button4.setOnClickListener(this);
 
-		button5 = (Button)findViewById(R.id.button5);
+		button5 = (Button) findViewById(R.id.button5);
 		button5.setOnClickListener(this);
-		
-		button6 = (Button)findViewById(R.id.button6);
+
+		button6 = (Button) findViewById(R.id.button6);
 		button6.setOnClickListener(this);
-		
-		button7 = (Button)findViewById(R.id.button7);
+
+		button7 = (Button) findViewById(R.id.button7);
 		button7.setOnClickListener(this);
-		
-		button8 = (Button)findViewById(R.id.button8);
+
+		button8 = (Button) findViewById(R.id.button8);
 		button8.setOnClickListener(this);
-		
-		button9 = (Button)findViewById(R.id.button9);
+
+		button9 = (Button) findViewById(R.id.button9);
 		button9.setOnClickListener(this);
 
-		buttonRestart = (Button)findViewById(R.id.buttonRestart);
+		buttonRestart = (Button) findViewById(R.id.buttonRestart);
 		buttonRestart.setOnClickListener(this);
 	}
 
@@ -72,9 +76,8 @@ public class MainActivity extends Activity implements OnClickListener, BoardView
 
 	@Override
 	public void onClick(View view) {
-		
-		switch(view.getId())
-		{
+
+		switch (view.getId()) {
 		case R.id.button1:
 			gp.setField(Coordinate.A1);
 			break;
@@ -106,7 +109,7 @@ public class MainActivity extends Activity implements OnClickListener, BoardView
 			gp.resetBoard();
 			break;
 
-		}		
+		}
 	}
 
 	@Override
@@ -120,21 +123,21 @@ public class MainActivity extends Activity implements OnClickListener, BoardView
 		button7.setText(null);
 		button8.setText(null);
 		button9.setText(null);
-		
+
 		buttonRestart.setEnabled(false);
 	}
 
 	@Override
 	public void showFieldState(Coordinate c, Value v) {
-		
-		if(!buttonRestart.isEnabled())
+
+		if (!buttonRestart.isEnabled())
 			buttonRestart.setEnabled(true);
-		
-		String buttonText = getString((v == Value.x)?R.string.field_value_x : R.string.filed_value_o);
+
+		String buttonText = getString((v == Value.x) ? R.string.field_value_x
+				: R.string.filed_value_o);
 		Button button = null;
-		
-		switch(c)
-		{
+
+		switch (c) {
 		case A1:
 			button = button1;
 			break;
@@ -161,10 +164,10 @@ public class MainActivity extends Activity implements OnClickListener, BoardView
 			break;
 		case C3:
 			button = button9;
-			break;			
+			break;
 		}
-		
+
 		button.setText(buttonText);
 	}
-	
+
 }

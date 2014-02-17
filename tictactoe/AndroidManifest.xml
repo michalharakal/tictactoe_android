@@ -29,7 +29,8 @@
   <application
       android:label="TicTacToe"
       android:icon="@drawable/ic_launcher" 
-      android:theme="@style/AppTheme">
+      android:theme="@style/AppTheme"
+      android:name=".TicTacToeApplication">
     <activity
         android:launchMode="singleTop"
         android:name="de.jugda.tictactoe.MainActivity"
